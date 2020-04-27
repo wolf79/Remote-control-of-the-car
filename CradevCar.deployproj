@@ -54,7 +54,7 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_640x480.png" Condition="'$(Config)'=='Debug'">
+        <DeployFile Include="splash\640x480.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>CradevCar\res\drawable-large\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage640</DeployClass>
@@ -63,7 +63,7 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_960x720.png" Condition="'$(Config)'=='Debug'">
+        <DeployFile Include="splash\960x720.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>CradevCar\res\drawable-xlarge\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage960</DeployClass>
@@ -72,7 +72,7 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_426x320.png" Condition="'$(Config)'=='Debug'">
+        <DeployFile Include="splash\426x320.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>CradevCar\res\drawable-small\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage426</DeployClass>
@@ -108,15 +108,14 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Android\Debug\libCradevCar.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>CradevCar\library\lib\armeabi-v7a\</RemoteDir>
+        <DeployFile Include="$(BDS)\lib\android\debug\mips\libnative-activity.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>CradevCar\library\lib\mips\</RemoteDir>
             <RemoteName>libCradevCar.so</RemoteName>
-            <DeployClass>ProjectOutput</DeployClass>
+            <DeployClass>AndroidLibnativeMipsFile</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
-            <Required>True</Required>
         </DeployFile>
         <DeployFile Include="Android\Debug\classes.dex" Condition="'$(Config)'=='Debug'">
             <RemoteDir>CradevCar\classes\</RemoteDir>
@@ -127,14 +126,15 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="$(BDS)\lib\android\debug\mips\libnative-activity.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>CradevCar\library\lib\mips\</RemoteDir>
+        <DeployFile Include="Android\Debug\libCradevCar.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>CradevCar\library\lib\armeabi-v7a\</RemoteDir>
             <RemoteName>libCradevCar.so</RemoteName>
-            <DeployClass>AndroidLibnativeMipsFile</DeployClass>
+            <DeployClass>ProjectOutput</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
+            <Required>True</Required>
         </DeployFile>
         <DeployFile Include="$(NDKBasePath)\prebuilt\android-arm\gdbserver\gdbserver" Condition="'$(Config)'=='Debug'">
             <RemoteDir>CradevCar\library\lib\armeabi-v7a\</RemoteDir>
@@ -199,7 +199,7 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_470x320.png" Condition="'$(Config)'=='Debug'">
+        <DeployFile Include="splash\470x320.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>CradevCar\res\drawable-normal\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage470</DeployClass>

@@ -5,7 +5,9 @@ boolean isMessage;
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
+  Serial.println('boshlandi');
   gsm.begin(9600);
+  delay(10000);
   gsm.print("AT+CMGF=1\r");
   delay(500);
   gsm.readString();

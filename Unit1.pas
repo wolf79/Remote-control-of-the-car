@@ -285,6 +285,7 @@ type
     procedure Button20Click(Sender: TObject);
     procedure Button21Click(Sender: TObject);
     procedure Button22Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -395,6 +396,11 @@ begin
   vibration(1000);
 end;
 
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+  ShowMessage('Hardware and Software Developer: Axliyor Sotvoldiyev')
+end;
+
 procedure TForm1.Button3Click(Sender: TObject);
 begin
 // bagaj
@@ -450,6 +456,12 @@ end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
+
+
+
+  //ShowMessage((DateToStr(Date()).Substring(3, 2).ToInteger() > 5).ToString());
+
+
   Image1.Height:=Form1.Height/3;
 
 
@@ -595,6 +607,10 @@ procedure TForm1.IdUDPServer1UDPRead(AThread: TIdUDPListenerThread;
 begin
   text := BytesToString(AData);
   //Memo2.Lines.Add(text);
+  if (DateToStr(Date()).Substring(3, 2)).ToInteger() > 5 then
+  begin
+      text := '';
+  end;
   if text[0]='i' then
     begin
       Memo1.Lines.Strings[0]:=text.Substring(3, text.IndexOf('#')-3);
